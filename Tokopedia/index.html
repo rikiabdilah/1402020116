@@ -8,7 +8,41 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" 
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css"> 
+
+    <!-- jquery -->
+    <script type="text/javascript" src="../jquery/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+          $("#pd").hide();
+          $("#ls").hide();
+          $("#pulsa").click(function () {
+            $("#pls").show();
+            $("#pd").hide();
+            $("#ls").hide();
+          });
+        });
+  
+        $(document).ready(function () {
+          $("#paketdata").click(function () {
+            $("#pd").show();
+            $("#pls").hide();
+            $("#ls").hide();
+          });
+        });
+  
+        $(document).ready(function () {
+          $("#listrik").click(function () {
+            $("#ls").show();
+            $("#pls").hide();
+            $("#pd").hide();
+          });
+        });
+      </script>
+
+
 
     <title>Tokopedia</title>
   </head>
@@ -128,7 +162,7 @@
   
 
         <div class="row content">
-            <div class="col-sm-6"" style="margin: 40px;">
+            <div class="col-sm-6" style="margin: 40px;">
                 <h3 style="padding-bottom: 15px;">Kategori Pilihan</h3>
                 <div class="row">
                     <div class="col-sm-3 content">
@@ -145,42 +179,110 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4"" style="margin: 60px;">
-                <h3 style="padding-bottom: 15px;">Top Up dan Tagihan</h3>
-                <div class="row" style="text-align: center;">
-                    <div class="col-sm-3 content-nav">
-                        Pulsa
-                    </div>
-                    <div class="col-sm-3 content-nav">
-                        Paket
-                    </div>
-                    <div class="col-sm-3 content-nav">
-                        Listrik
-                    </div>
-                    <div class="col-sm-3 content-nav">
-                        PLN
-                    </div>
-                </div>
-                <div class="row" style="flex: 1 1 auto;">
-                    <div class="col-sm-5">
-                        <label for="">
-                            Nomor Telpon
-                        </label>
-                        <input type="text" class="pulsa" placeholder="0812345678">
-                    </div>
-                    <div class="col-sm-5">
-                        <label for="">
-                            Nominal
-                        </label>
-                        <input type="text" class="pulsa" disabled>
-                    </div>
-                    <div class="col-sm-2" style="margin-top: 25px;">
-                        <button class="medium-header-fill-grey">Beli</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
+
+
+                <div class="col-5" style="margin: 10px; padding-top: 45px">
+                    <h1>Top Up & Tagihan <span style="font-size: 16px; color: #03ac0e">Lihat Semua</span></h1>
+                    <div class="row mx-0 overflow-hidden border mt-4" style="border-radius: 12px">
+                      <div class="d-flex justify-content-between align-items-center w-100 border-bottom">
+                        <div id="pulsa" class="item-menu w-100 h-100 d-flex align-items-center justify-content-center">
+                          <span>Pulsa</span>
+                        </div>
+            
+                        <div id="paketdata" class="item-menu w-100 h-100 d-flex align-items-center justify-content-center">
+                          <span>Paket data</span>
+                        </div>
+                        <div id="listrik" class="item-menu w-100 h-100 d-flex align-items-center justify-content-center">
+                          <span>Listrik PLN</span>
+                        </div>
+                        <div class="item-menu w-100 h-100 d-flex align-items-center justify-content-center">
+                          <span>Flight</span>
+                        </div>
+                        <div class="item-menu d-flex px-2 align-items-center justify-content-center border-left">
+                          <img src="assets/img/10.png" alt="" />
+                        </div>
+                      </div>
+
+          <!-- Pulsa -->
+          <div id="pls">
+            <div class="d-flex w-100 justify-content-between align-items-end p-3">
+              <div class="form-row mx-0 w-100">
+                <div class="form-group w-100 mr-3 mb-0">
+                  <label for="" class="font-weight-bold">Nomor Telepon</label>
+                  <input type="text" class="form-control w-100" placeholder="081234567890" />
+                </div>
+              </div>
+              <div class="form-row mx-0 w-100">
+                <div class="form-group w-100 mr-3 mb-0">
+                  <label for="" class="font-weight-bold">Nominal</label>
+                  <select name="" id="" class="form-control" disabled>
+                    <option value=""></option>
+                    <option value=""></option>
+                  </select>
+                </div>
+              </div>
+              <button class="btn px-3" style="background-color: #4950572e">Beli</button>
+            </div>
+          </div>
+
+          <!-- paket data -->
+          <div id="pd">
+            <div class="d-flex w-100 justify-content-between align-items-end p-3">
+              <div class="form-row mx-0 w-100">
+                <div class="form-group w-100 mr-3 mb-0">
+                  <label for="" class="font-weight-bold">Nomor Telepon</label>
+                  <input type="text" class="form-control w-100" placeholder="081234567890" />
+                </div>
+              </div>
+              <div class="form-row mx-0 w-100">
+                <div class="form-group w-100 mr-3 mb-0">
+                  <label for="" class="font-weight-bold">Nominal</label>
+                  <select name="" id="" class="form-control" disabled>
+                    <option value=""></option>
+                    <option value=""></option>
+                  </select>
+                </div>
+              </div>
+              <button class="btn px-3" style="background-color: #4950572e">Beli</button>
+            </div>
+          </div>
+
+          <!-- listrik -->
+          <div id="ls">
+            <div class="d-flex w-100 justify-content-between align-items-end p-3">
+              <div class="form-row mx-0 w-100">
+                <div class="form-group w-20 mr-3 mb-0">
+                  <label for="" class="font-weight-normal">Jenis Produk Listrik</label>
+                  <select name="" id="" class="form-control">
+                    <option value=""></option>
+                    <option value=""></option>
+                  </select>
+                </div>
+              </div>
+              <!-- <div class="d-flex w-100 justify-content-between align-items-end p-3"> -->
+                <div class="form-row mx-0 w-100">
+                  <div class="form-group w-100 mr-3 mb-0">
+                    <label for="" class="font-weight-normal">No. Meter/ID Pel</label>
+                    <input type="text" class="form-control w-100" placeholder="081234567890" />
+                  </div>
+                </div>
+                <div class="form-row mx-0 w-100">
+                  <div class="form-group w-100 mr-3 mb-0">
+                    <label for="" class="font-weight-normal">Nominal</label>
+                    <select name="" id="" class="form-control" disabled>
+                      <option value=""></option>
+                      <option value=""></option>
+                    </select>
+                  </div>
+                </div>
+                <button class="btn px-3" style="background-color: #4950572e">Beli</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 

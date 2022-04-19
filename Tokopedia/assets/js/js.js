@@ -4,5 +4,5 @@ function on(){
     var overlay = document.getElementById("overlay");
 
     menunBar.classList.toggle("menuBarStyle");
-    overlay.classList.toggle("overlayStyle");
+    overlay.classList.toggle("overLayStyle");
 }
